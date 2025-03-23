@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* css file imports */
+@import url("sections/header.css");
+@import url("sections/hero.css");
+@import url("sections/describe-section.css");
+@import url("sections/services.css");
+@import url("sections/spare-parts.css");
+@import url("sections/our-designs.css");
+@import url("sections/our-videos.css");
+@import url("sections/about.css");
+@import url("sections/contact-us.css");
+@import url("sections/footer.css");
+
+/* CSS variables for reusablity across all files (including above imported) */
+
+:root {
+  --base-font: "Poppins", sans-serif;
+  --primary-color: #266bf3;
+  --success-color: #2ecc71;
+  --primary-color-400: #1258b6;
+  --main-bg-color: #060615;
+  --secondary-color: #121212;
+  --gray-100: #888888;
+  --color-white: #fff;
+  --font-sm: 0.8rem;
+  --font-md: 1rem;
+  --font-lg: 1.5rem;
+  --font-xlg: 3rem;
+  --black-200: #020202;
+  --black-300: #333333;
+  --black-400: #1f1e31;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--main-bg-color);
+  height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* .main__section {
+  height: 100%;
+  overflow-y: auto;
+} */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.default-section {
+  padding: 1rem;
+  max-width: 1280px;
+}
+
+/************************** reusable btn **************************/
+
+.reusable__btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: var(--color-white);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reusable__btn:hover {
+  background: var(--primary-color-400);
+}
