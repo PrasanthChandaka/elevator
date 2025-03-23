@@ -12,7 +12,7 @@
 @import url("sections/contact-us.css");
 @import url("sections/footer.css");
 
-/* CSS variables for reusablity across all files (including above imported) */
+/* CSS variables for reusablity across all files (including above imported) **/
 
 :root {
   --base-font: "Poppins", sans-serif;
