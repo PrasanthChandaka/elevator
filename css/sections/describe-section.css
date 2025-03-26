@@ -4,6 +4,7 @@
   background-color: var(--color-white);
   margin: auto;
   border-radius: 1rem;
+  font-family: var(--base-font);
 }
 
 .describe__section_image {

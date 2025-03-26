@@ -27,6 +27,40 @@ videos.forEach((video) => {
         v.pause();
       }
     });
+
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+      video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
+  });
+
+  document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) {
+      video.pause();
+    }
+  });
+
+  document.addEventListener("webkitfullscreenchange", () => {
+    if (!document.webkitFullscreenElement) {
+      video.pause();
+    }
+  });
+
+  document.addEventListener("mozfullscreenchange", () => {
+    if (!document.mozFullScreen) {
+      video.pause();
+    }
+  });
+
+  document.addEventListener("MSFullscreenChange", () => {
+    if (!document.msFullscreenElement) {
+      video.pause();
+    }
   });
 });
 
